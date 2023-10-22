@@ -1,66 +1,19 @@
-## Foundry
+### hw1 and hw2
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+use   
+`forge test -vvv` to run all test  
+or  
+`forge test --mc {TestContract} -vvv` to run specific test.  
 
-Foundry consists of:
+TestContract are  
+`NoUsefulTest`  
+`HW_TokenTest`  
+`ReceiverContractTest`  
+`FreeMintTest`  
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+note:  
+use `forge install` to install the library  
+if you could not install  
+maybe try remove the lib first then install again.  
+`rmdir lib/forge-std lib/openzeppelin-contracts`  
+`forge install openzeppelin/openzeppelin-contracts foundry-rs/forge-std --no-commit`  
